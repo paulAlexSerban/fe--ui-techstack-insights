@@ -1,0 +1,33 @@
+.a-link__base {
+  font-family: var(--text-regular);
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-weight: normal;
+  letter-spacing: 0.03125rem;
+  text-decoration: none;
+  color: #7c7b9c;
+}
+@media only screen and (min-width: 1439px) {
+  .a-link__base {
+    font-size: 1.1875rem;
+    line-height: 27px;
+  }
+}
+@media only screen and (min-width: 1919px) {
+  .a-link__base {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.a-link__base--navigation {
+  color: #494949;
+}
+
+.a-link__base:hover,
+.a-link__base:focus {
+  color: #777;
+  text-decoration: none;
+  box-shadow: 0 1px 0 0 #777;
+  transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}

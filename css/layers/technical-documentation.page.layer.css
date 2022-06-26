@@ -1,0 +1,113 @@
+body,
+ul,
+ol,
+*,
+*::before,
+*::after {
+  margin: 0;
+}
+
+body,
+fieldset,
+*,
+*::before,
+*::after {
+  padding: 0;
+}
+
+img,
+fieldset {
+  border: none;
+}
+
+html,
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+main,
+img {
+  display: block;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+body {
+  position: relative;
+}
+
+body > * {
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+}
+
+html {
+}
+
+html {
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+
+  height: auto;
+
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+html {
+  line-height: 1.15;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+::-moz-selection {
+  background-color: #1f1f1f;
+  color: #eee;
+}
+::selection {
+  background-color: #1f1f1f;
+  color: #eee;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+textarea {
+  white-space: revert;
+}
+
+body {
+  background-color: var(--main-background-color);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+:root {
+  --text-base-color: #1f1f1f;
+  --font-weight--page-title: 300;
+  --font-weight--heading: 400;
+  --font-weight--button: 400;
+  --text-regular: Open Sans, sans-serif;
+
+  --text-code: Courier Prime, monospace;
+
+  --main-background-color: #fff;
+}

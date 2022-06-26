@@ -1,0 +1,9 @@
+.a-image__base {
+  max-width: 30rem;
+  max-height: 300px;
+}
+@media only screen and (min-width: 959px) {
+  .a-image__base {
+    max-width: 45rem;
+  }
+}

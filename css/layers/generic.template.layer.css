@@ -1,0 +1,21 @@
+.a-paragraph__base {
+  font-family: var(--text-regular);
+  font-size: 1.0625rem;
+  line-height: 1.4375rem;
+  font-weight: 400;
+  letter-spacing: 0.03125rem;
+  color: var(--text-base-color);
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 1439px) {
+  .a-paragraph__base {
+    font-size: 1.1875rem;
+    line-height: 1.6875rem;
+  }
+}
+@media only screen and (min-width: 1919px) {
+  .a-paragraph__base {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}

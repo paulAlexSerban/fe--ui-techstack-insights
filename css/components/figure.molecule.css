@@ -1,0 +1,33 @@
+.m-figure__base {
+  margin: 0 auto;
+}
+
+.m-figure__base {
+  margin-bottom: 16px;
+}
+
+.m-figure__base {
+  border: thin solid #777;
+  display: block;
+  padding: 0.5rem 0.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.m-figure__caption {
+  font-family: var(--text-regular);
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.03125rem;
+  background-color: var(--text-base-color);
+  color: #fff;
+  padding: 3px;
+  text-align: center;
+}
+@media only screen and (min-width: 1439px) {
+  .m-figure__caption {
+    font-size: 1.0625rem;
+    line-height: 1.375rem;
+  }
+}

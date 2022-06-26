@@ -1,0 +1,42 @@
+.a-definition-list__base {
+  color: var(--text-base-color);
+  margin-bottom: 1rem;
+}
+.a-definition-list__term {
+  font-family: var(--text-regular);
+  font-size: 1.0625rem;
+  line-height: 1.4375rem;
+  font-weight: 700;
+}
+@media only screen and (min-width: 1439px) {
+  .a-definition-list__term {
+    font-size: 1.1875rem;
+    line-height: 1.6875rem;
+  }
+}
+@media only screen and (min-width: 1919px) {
+  .a-definition-list__term {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+.a-definition-list__explanation {
+  font-family: var(--text-regular);
+  font-size: 1.0625rem;
+  line-height: 1.4375rem;
+  font-weight: 400;
+  letter-spacing: 0.03125rem;
+  padding-left: 4rem;
+}
+@media only screen and (min-width: 1439px) {
+  .a-definition-list__explanation {
+    font-size: 1.1875rem;
+    line-height: 1.6875rem;
+  }
+}
+@media only screen and (min-width: 1919px) {
+  .a-definition-list__explanation {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}

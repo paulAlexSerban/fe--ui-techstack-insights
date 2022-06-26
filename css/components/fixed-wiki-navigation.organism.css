@@ -1,0 +1,13 @@
+.o-fixed-wiki-navigation__base {
+  height: 100%;
+}
+
+.o-fixed-wiki-navigation__base {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 25%;
+  min-width: 100px;
+  height: 100vh;
+  border-right: 1px solid #777;
+}

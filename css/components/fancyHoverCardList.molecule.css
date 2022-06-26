@@ -1,0 +1,39 @@
+.m-fancyHoverCardList__list {
+  display: flex;
+}
+.m-fancyHoverCardList__list:hover .m-fancyHoverCardList__listItem {
+  transform: scale(0.9);
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.8);
+}
+.m-fancyHoverCardList__list:hover .m-fancyHoverCardList__listItem:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px -15px rgba(0, 0, 0, 0.5);
+}
+.m-fancyHoverCardList__listItem {
+  margin: 10px;
+  padding: 0.5em;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+.m-fancyHoverCardList__listItem:first-child {
+  background: #55efc4;
+}
+.m-fancyHoverCardList__listItem:nth-child(2) {
+  background: #81ecec;
+}
+.m-fancyHoverCardList__listItem:nth-child(3) {
+  background: #74b9ff;
+}
+.m-fancyHoverCardList__listItem img {
+  display: block;
+  max-width: 100%;
+}
+.m-fancyHoverCardList__listItem p {
+  margin: 0.5em;
+  text-align: center;
+  color: #fff;
+}

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./css/pages/technical-documentation.page.css" />
+  <title>HTML Basics</title>
+</head>
+
+<body class="l-sidebar-says__base grid" data-page="technical-documentation" data-template="wiki">
+  <nav class="l-sidebar-says__sidebar o-fixed-wiki-navigation__base grid">
+    <header class="o-header__base">
+      <h1 class="a-heading__base a-heading__base--page-title">
+        <span class="a-heading__main">HTML Basics</span>
+      </h1>
+    </header>
+    <ul class="a-unordered-list__base">
+      <li class="a-unordered-list__item">
+        <a href="#html-doctype" class="a-link__base a-link__base--navigation">HTML Doctype</a>
+      </li>
+      <li class="a-unordered-list__item">
+        <a href="#html-dom-node-tree-node-elements-and-values" class="a-link__base a-link__base--navigation">HTML DOM,
+          Tree, Elements and Values</a></li>
+      <li class="a-unordered-list__item">
+        <a href="#html-semantic-sectioning-elements" class="a-link__base a-link__base--navigation">HTML5 Semantic &
+          Sectioning Elements</a>
+      </li>
+      <li class="a-unordered-list__item">
+        <a href="#headers-h1-h6" class="a-link__base a-link__base--navigation">Headers &lt;h1&gt; - &lt;h6&gt;</a>
+      </li>
+      <li class="a-unordered-list__item">
+        <a href="#semantic-website-structure" class="a-link__base a-link__base--navigation">Semantic Website Structure</a>
+      </li>
+      <li class="a-unordered-list__item">
+        <a href="#meta-tags" class="a-link__base a-link__base--navigation">Meta-tags</a>
+      </li>
+      <li class="a-unordered-list__item">
+        <a href="#html5-validation" class="a-link__base a-link__base--navigation">HTML5 Validation</a>
+      </li>
+      <li class="a-unordered-list__item"><a href="#understand-and-code-according-to-coding-conventions" class="a-link__base a-link__base--navigation">Understand and Code according to coding conventions</a></li>
+    </ul>
+  </nav>
+  <main class="l-sidebar-says__content o-wiki-main__base grid">
+    <article class="o-article__base" id="html-doctype">
+      <h2 class="a-heading__base a-heading__base--heading-200 a-heading__base--is-center-aligned ">
+        <span class="a-heading__main">HTML Doctype</span>
+      </h2>
+      <section class="o-section__base">
+        <h3 class="a-heading__base a-heading__base--heading-300">
+          <span class="a-heading__main">About Doctype</span>
+        </h3>
+        <p class="a-paragraph__base">
+          The HTML <code class="a-code__base">!DOCTYPE</code> declaration is the required preamble found at the top of
+          all HTML documents before opening the <code class="a-code__base">html</code> tag and it is an instruction to
+          the web-browser about what version of HTML the page is written in </p>
+        <p class="a-paragraph__base">
+          The main purpose of the <code class="a-code__base">!DOCTYPE</code> declaration is to prevent a browser from
+          switching into the so-called <a class="a-link__base" href="#quirkMode">quirk mode</a> when rendering the HTML
+          document. </p>
+        <p class="a-paragraph__base">
+          Also the <code class="a-code__base">!DOCTYPE html</code> declaration ensures that the browser makes the
+          best-effort attempt at following the relevant specifications rather than using a different rendering mode that
+          is incompatible with some specifications and it is required to insure that your web pages are displayed the
+          way they were intended to be displayed. </p>
+      </section>
+      <section class="o-section__base">
+        <h3 class="a-heading__base a-heading__base--heading-300">
+          <span class="a-heading__main">Nota Bene</span>
+        </h3>
+        <ul class="a-unordered-list__base a-unordered-list__base--bulleted">
+          <li class="a-unordered-list__item"> The <code class="a-code__base">!DOCTYPE</code> declaration is NOT a HTML
+            tag and is NOT case sensitive;
+          </li>
+          <li class="a-unordered-list__item"> The <code class="a-code__base">!DOCTYPE</code> declaration points to a
+            Document Type Definition (DTD) and
+            it is an instruction to the web browser about the version of the markup language the page is written in;
+          </li>
+        </ul>
+      </section>
+      <section class="o-section__base">
+        <h3 class="a-heading__base a-heading__base--heading-300">
+          <span class="a-heading__main">Tips & Tricks</span>
+        </h3>
+        <ul class="a-unordered-list__base a-unordered-list__base--bulleted">
+          <li class="a-unordered-list__item">Always use W3C's validator to check your HTML for markup or syntax error
+            before publishing online;</li>
+          <li class="a-unordered-list__item">There is an additional tag to be put for Internet Explorer &lt;=10 users to
+            avoid <a class="a-link__base" href="#quirkMode">quirk mode</a> in the head: <code
+              class="a-code__base">&lt;meta http-equiv="X-UA-Compatible" content="IE-Edge"&gt;</code></li>
+        </ul>
+      </section>
+      <section class="o-section__base">
+        <h3 class="a-heading__base a-heading__base--heading-300">
+          <span class="a-heading__main">Notes</span>
+        </h3>
+        <dl class="a-definition-list__base">
+          <dt class="a-definition-list__term" id="quirkMode">Quirk Mode</dt>
+          <dd class="a-definition-list__explanation">
+            Refers to a technique used by some web browsers for the sake of maintaining backward compatibility with web
+            pages designed for old web browsers instead of strictly complying with W3C and IETF standards in standards
+            mode.
+          </dd>
+        </dl>
+      </section>
+    </article>
+    <article class="o-article__base" id="html-dom-node-tree-node-elements-and-values">
+      <h2 class="a-heading__base a-heading__base--heading-200 a-heading__base--is-center-aligned ">
+        <span class="a-heading__main">HTML DOM, Node-tree, Node-elements and Values</span>
+      </h2>
+      <section class="o-section__base">
+        <h3 class="a-heading__base a-heading__base--heading-300">
+          <span class="a-heading__main">HTML & JavaScript DOM</span>
+        </h3>
+        <dl class="a-definition-list__base">
+          <dt class="a-definition-list__term">It defines:</dt>
+          <dd class="a-definition-list__explanation">HTML elements as objects;</dd>
+          <dd class="a-definition-list__explanation">Properties for all HTML elements;</dd>
+          <dd class="a-definition-list__explanation">Methods for all HTML elements;</dd>
+          <dd class="a-definition-list__explanation">Events for all HTML elements</dd>
+        </dl>
+        <dl class="a-definition-list__base">
+          <dt class="a-definition-list__term">JS can add/change/remove/react to:</dt>
+          <dd class="a-definition-list__explanation">HTML elements</dd>
+          <dd class="a-definition-list__explanation">HTML attributes</dd>
+          <dd class="a-definition-list__explanation">HTML events</dd>
+        </dl>
+      </section>
+      <section class="o-section__base">
+        <h3 class="a-heading__base a-heading__base--heading-300">
+          <span class="a-heading__main">Document Object Model (DOM)</span>
+        </h3>
+        <p class="a-paragraph__base">
+          The DOM is a programming interface for HTML and XML documents. It represents the document as nodes and objects
+          which can be accessed with programming languages to change the document structure, style and content.
+        </p>
+        <p class="a-paragraph__base">
+          When the page is loaded, the browser creates a Document Object Model of the page, this represents the document
+          that can be manipulated as it is an object-oriented representation of the page which can be modified with a
+          programming language such as JavaScript.
+        </p>
+        <figure class="m-figure__base">
+          <img class="a-image__base" src="https://i.ibb.co/Zd9zfWF/img-html-dom-tree.gif"
+            alt="html dom tree representation" />
+          <figcaption class="m-figure__caption">The HTML DOM model is constructed as a tree of objects.
+          </figcaption>
+        </figure>
+        <p class="a-paragraph__base">
+          The DOM is built using multiple APIs that work together, the core DOM defines the objects that describe the
+          document and the objects within it this way other APIs can add new features and capabilities to the DOM.
+        </p>
+        <p class="a-paragraph__base">
+          To access the HTML elements with JavaScript you can select them using by ID, tag name, class name, CSS
+          selectors and HTML object collections.
+        </p>
+      </section>
+      <section class="o-section__base">
+        <h3 class="a-heading__base a-heading__base--heading-300">
+          <span class="a-heading__main">Node-trees, node elements and values</span>
+        </h3>
+        <p class="a-paragraph__base">
+          The HTML DOM Node Tree or the Document Tree is the term used to reference the HTML tree-structure which is
+          also called a node-tree.
+        </p>
+        <p class="a-paragraph__base">Through the node-tree all nodes can be accessed, their contents can be
+          modified or deleted, and new elements can be created.</p>
+        <p class="a-paragraph__base">The nodes in a tree have a hierarchical relationship to each other,
+          these relationships are described using terms such as parent, child, and sibling.</p>
+        <p class="a-paragraph__base">
+          In a node tree, the top node is called the root, every node, except the root, has only one
+          parent node, a node can have any number of children, a leaf is a node with no children and siblings are
+          nodes with the same parent.
+        </p>
+        <p class="a-paragraph__base">
+          A node-element is the most general base class from which all element objects in a HTML
+          document inherits properties from its parent node.
+        </p>
+        <p class="a-paragraph__base">
+          The node-value is used to get the content of the node, mostly used for text elements becaus
+          for most of the others it returns null.
+        </p>
+      </section>
+    </article>
+    <article class="o-article__base" id="html-semantic-sectioning-elements">
+      <h2 class="a-heading__base a-heading__base--heading-200 a-heading__base--is-center-aligned ">
+        <span class="a-heading__main">HTML5 Semantic & Sectioning Elements</span>
+      </h2>
+      <section class="o-section__base">
+        <h3 class="a-heading__base a-heading__base--heading-300">
+          <span class="a-heading__main">Semantics in HTML</span>
+        </h3>
+        <p class="a-paragraph__base">
+          When we talk about semantics in programming we refer to the meaning of the piece of code in that specific
+          purpose.
+        </p>
+        <p class="a-paragraph__base">
+          HTML tags tell the browser how to display the content on the page, but as these elements do not give any
+          indication about what type of content they contain ot the role they have, semantic HTML5 elements were
+          implemented to address the problem by defining specific tags to indicate a clear role about the content of the
+          element. </p>
+        <p class="a-paragraph__base">
+          In HTML, semantic elements give the content they wrap around a role/meaning in the entire
+          context of the page, and by default the majority of the user agent stylesheets will style these
+          elements, but HTML should be coded to represent the data that will be populated and not based on its
+          default presentation styling - presentation is the responsibility of CSS.
+        </p>
+        <p class="a-paragraph__base">
+          Benefits of using HTML semantic elements:
+        </p>
+        <ul class="a-unordered-list__base a-unordered-list__base--bulleted">
+          <li class="a-unordered-list__item">Search engines rank pages according the semantic elements and using the
+            contents as keywords.</li>
+          <li class="a-unordered-list__item">People using screen readers benefit from using semantically correct
+            implemented elements, using these elements as signposts</li>
+          <li class="a-unordered-list__item">
+            Blocks of meaningful code is much more easier to find than searching through a much of <code
+              class="a-code__base">&lt;div&gt;</code> elements.
+          </li>
+          <li class="a-unordered-list__item">
+            The semantic naming of the elements symbolizes the proper custom element naming.
+          </li>
+          <li class="a-unordered-list__item">
+            The developer benefit from using semantic elements because these suggest the type of data that should be
+            used as content.
+          </li>
+        </ul>
+        <p class="section_text">There are more than 100 semantic elements available but the most used are:
+        </p>
+        <ul class="a-unordered-list__base a-unordered-list__base--bulleted">
+          <li class="a-unordered-list__item">
+            Main root - <code class="a-code__base">&lt;html&gt;</code>
+          </li>
+          <li class="a-unordered-list__item">
+            Document metadata - <code class="a-code__base">&lt;head&gt;, &lt;meta&gt;, &lt;link&gt;, &lt;style&gt; and
+              &lt;title&gt;</code></li>
+          <li class="a-unordered-list__item">
+            Sectioning root - <code class="a-code__base">&lt;body&gt;</code></li>
+          <li class="a-unordered-list__item">
+            Content sectioning - <code class="a-code__base">&lt;header&gt;, &lt;main&gt;, &lt;footer&gt;,
+              &lt;article&gt;,
+              &lt;aside&gt;, &lt;nav&gt;, &lt;section&gt; and &lt;h1&gt;-&lt;h6&gt;</code></li>
+        </ul>
+        <figure class="m-figure__base">
+          <img class="a-image__base" src="https://i.ibb.co/C0R95bT/html5-elements.png"
+            alt="HTML element flowchart - how to choose the elements" />
+          <figcaption class="m-figure__caption">Which Element is the right one to choose?</figcaption>
+        </figure>
+      </section>
+      <section class="o-section__base">
+        <h3 class="a-heading__base a-heading__base--heading-300">
+          <span class="a-heading__main">Using the HTML5 Sectioning Elements</span>
+        </h3>
+        <h4 class="a-heading__base a-heading__base--heading-400 a-heading__base--is-center-aligned ">
+          <span class="a-heading__main">The main Element</span>
+        </h4>
+        <p class="a-paragraph__base">
+          The <code class="a-code__base">&lt;main&gt;</code> element should contain the main content for your web page.
+          All of this content should be unique to the individual page, and should not appear elsewhere on the site. Any
+          content that is repeated on multiple pages (logos, search boxes, footer, links, etc.) should no be placed
+          within the <code class="a-code__base">&lt;main&gt;</code> element. </p>
+        <p class="a-paragraph__base">The ARIA <code class="a-code__base">role="main"</code> attribute indicates the
+          significance
+          of this element to programs that don't yet support the <code class="a-code__base">&lt;main&gt;</code> element
+          (such as screen readers).</p>
+
+        <h4 class="a-heading__base a-heading__base--heading-400 a-heading__base--is-center-aligned ">
+          <span class="a-heading__main">The article Element</span>
+        </h4>
+        <p class="a-paragraph__base">
+          The <code class="a-code__base">&lt;article&gt;</code> element should contain a piece of self-contained content
+          that could be distributed outside the context of the page. This includes things like news
+          articles, blog posts, or user comments.
+        </p>
+        <p class="a-paragraph__base">There can also be nested <code class="a-code__base">&lt;article&gt;</code> elements
+          within
+          one another.</p>
+
+        <h4 class="a-heading__base a-heading__base--heading-400 a-heading__base--is-center-aligned ">
+          <span class="a-heading__main">The section Element</span>
+        </h4>
+        <p class="a-paragraph__base">
+          The <code class="a-code__base">&lt;section&gt;</code> element is used to represent a group of related content.
+          This is similar to the purpose of an <code class="a-code__base">&lt;article&gt;</code> element with the main
+          difference being that the content within a <code class="a-code__base">&lt;section&gt;</code> element does not
+          necessarily need to make sense out of the context of the page.
+        </p>
+        <p class="a-paragraph__base">
+          There might be that the <code class="a-code__base">&lt;article&gt;</code> element is used to represent a
+          whole, and then multiple <code class="a-code__base">&lt;section&gt;</code> elements to represent each of the
+          sub-topics. </p>
+        <p class="a-paragraph__base">
+          If you just need to group content together for styling purposes you should use a <code
+            class="a-code__base">&lt;div&gt;</code> element rather than a <code
+            class="a-code__base">&lt;section&gt;</code> element.
+        </p>
+
+        <h4 class="a-heading__base a-heading__base--heading-400 a-heading__base--is-center-aligned ">
+          <span class="a-heading__main">The nav Element</span>
+        </h4>
+        <p class="a-paragraph__base">
+          The <code class="a-code__base">&lt;nav&gt;</code> element is used to mark up a collection of links to external
+          pages or sections within the current page. As well as being used for the main website navigation, the <code
+            class="a-code__base">&lt;nav&gt;</code> element is also a good fit for things like a table of contents or a
+          blog-roll. </p>
+        <p class="a-paragraph__base">
+          Marking up your links within a list will often make you navigation easier to use, however this is not a
+          requirement when using a <code class="a-code__base">&lt;nav&gt;</code> element.
+        </p>
+
+        <h4 class="a-heading__base a-heading__base--heading-400 a-heading__base--is-center-aligned ">
+          <span class="a-heading__main">The aside Element</span>
+        </h4>
+        <p class="a-paragraph__base">
+          The <code class="a-code__base">&lt;aside&gt;</code> element is used to represent content that is tangibly
+          related to the content surrounding it, but could be considered separate. This includes things like
+          sidebars, groups of <code class="a-code__base">&lt;nav&gt;</code> elements, figures and pull quotes.
+        </p>
+
+        <h4 class="a-heading__base a-heading__base--heading-400 a-heading__base--is-center-aligned ">
+          <span class="a-heading__main">The header Element</span>
+        </h4>
+        <p class="a-paragraph__base">
+          The <code class="a-code__base">&lt;header&gt;</code> element is used to represent the introductory content to
+          an article of web page. This will usually contain a heading element as well as some metadata that is relevant
+          to the content, such as a post date of a news article for example. it could also contain a table of contents
+          (within a <code class="a-code__base">&lt;nav&gt;</code> element) foa longer document.
+        </p>
+        <p class="a-paragraph__base">
+          A <code class="a-code__base">&lt;header&gt;</code> element will be associated with the nearest sectioning
+          element, usually it's direct parent in he page structure.
+        </p>
+
+        <h4 class="a-heading__base a-heading__base--heading-400 a-heading__base--is-center-aligned ">
+          <span class="a-heading__main">The footer Element</span>
+        </h4>
+        <p class="a-paragraph__base">
+          The <code class="a-code__base">&lt;footer&gt;</code> element is used to represent information about a section
+          such as the author, copyright information, or links ro related web pages.
+        </p>
+        <div class="a-paragraph__base">
+          As with <code class="a-code__base">&lt;header&gt;</code>, the <code class="a-code__base">&lt;footer&gt;</code>
+          element is associated with the nearest sectioning element.
+        </div>
+
+        <h4 class="a-heading__base a-heading__base--heading-400 a-heading__base--is-center-aligned ">
+          <span class="a-heading__main">The address Element</span>
+        </h4>
+        <p class="a-paragraph__base">
+          The <code class="a-code__base">&lt;address&gt;</code> element is one of the most commonly misunderstood HTML
+          elements. This element is not for making up postal address, but rather for representing
+          the contact information for an article or web page. This could be a link to the author's
+          website or their email address.
+        </p>
+        <p class="a-paragraph__base">
+          This element is ofthen used within the <code class="a-code__base">&lt;footer&gt;</code> for an
+          <code class="a-code__base">&lt;article&gt;</code>.
+        </p>
+      </section>
+      <section class="o-section__base">
+        <h3 class="a-heading__base a-heading__base--heading-300">
+          <span class="a-heading__main">Nota Bene</span>
+        </h3>
+        <p class="a-paragraph__base">
+          The ARIA role attribute is used to indicate the significance of its element to programs that do not yet
+          support that specific semantic element, such as screen readers.
+        </p>
+        <p class="a-paragraph__base">
+          For elements that have no ARIA role assigned the aria-label attribute should be used to define the string that
+          labels the current element.
+        </p>
+      </section>
+    </article>
+    <article class="o-article__base" id="headers-h1-h6">
+      <h2 class="a-heading__base a-heading__base--heading-200 a-heading__base--is-center-aligned ">
+        <span class="a-heading__main">Headers &lt;h1&gt; - &lt;h6&gt;</span>
+      </h2>
+      <section class="o-section__base">
+        <h3 class="a-heading__base a-heading__base--heading-300">
+          <span class="a-heading__main">About</span>
+        </h3>
+        <p class="a-paragraph__base">
+          The <code class="a-code__base">&lt;h1&gt; - &lt;h6&gt; are used to define HTML headings</code> and mostly used
+          for titles and subtitles of the context they are in.
+        </p>
+      </section>
+      <section class="o-section__base">
+        <h3 class="a-heading__base a-heading__base--heading-300">
+          <span class="a-heading__main">Accesibility concerns</span>
+        </h3>
+        <p class="a-paragraph__base">
+          Screen reading softweare, as a navigation technique jump from heading to heading to quickly determine the
+          content of the page - because of this it is important not to skip heading levels because it may create
+          confusion. </p>
+      </section>
+      <section class="o-section__base">
+        <h3 class="a-heading__base a-heading__base--heading-300">
+          <span class="a-heading__main">Nota Bene</span>
+        </h3>
+        <p class="a-paragraph__base">
+          Headings may be used by user agents to construct a table pf contents for a document automatically.
+        </p>
+        <p class="a-paragraph__base">
+          Heading tags should not be used for styling purposes, use CSS for that. Heading tags should be used to
+          indicate their relative importance.
+        </p>
+        <p class="a-paragraph__base">
+          Skipping heading levels is a very bad practice.
+        </p>
+        <p class="a-paragraph__base">
+          The <code class="a-code__base">&lt;h1&gt;</code> element should be used only once, it is the most important
+          heading, and tells you what the purpose of the overall page is - as you would not ahve a book with more
+          than one title per page - also having a single top-level title is arguably better for screen-reader users and
+          SEO.
+        </p>
+      </section>
+    </article>
+    <article class="o-article__base" id="semantic-website-structure">
+      <h2 class="a-heading__base a-heading__base--heading-200 a-heading__base--is-center-aligned ">
+        <span class="a-heading__main">Semantic Website Structure</span>
+      </h2>
+      <section class="o-section__base">
+
+        <h3 class="a-heading__base a-heading__base--heading-300">
+          <span class="a-heading__main">What is ...</span>
+        </h3>
+        <p class="a-paragraph__base">
+          HTML uses a number of block level elements that define areas of the website such as "the header", "the
+          navigation menu", "the main content column".
+        </p>
+        <p class="a-paragraph__base">
+          It might be that webpages look pretty different from one another, but they all share the same standard
+          components.
+        </p>
+      </section>
+      <section class="o-section__base">
+        <h3 class="a-heading__base a-heading__base--heading-300">
+          <span class="a-heading__main">Which are these block level elements?</span>
+        </h3>
+        <dl class="a-definition-list__base">
+          <dt class="a-definition-list__term">header</dt>
+          <dd class="a-definition-list__explanation">Usually this is he big strip across the top of the page with a big
+            heading and/or logo. This is where the main common information about the website usually stays - this part
+            is wrapped in the <code class="a-code__base">&lt;header&gt;</code>.</dd>
+          <dt class="a-definition-list__term">navigation bar</dt>
+          <dd class="a-definition-list__explanation">All the links to the sites main sections should be found here
+            represented by buttons, link sor tabs - this part is wrapped by
+            <code class="a-code__base">&lt;nav&gt;</code>.
+          </dd>
+          <dt class="a-definition-list__term">main content</dt>
+          <dd class="a-definition-list__explanation">This is the biggest area of the page and contains the unique
+            content of a given webpage - this part is wrapped by <code class="a-code__base">&lt;main&gt;</code>,
+            and its content divided by <code class="a-code__base">&lt;article&gt;, &lt;section&gt; and &lt;div&gt;
+            </code> elements.
+          </dd>
+          <dt class="a-definition-list__term">sidebar</dt>
+          <dd class="a-definition-list__explanation">In this part are placed some peripheral info, links,
+            ads, etc. Usually this is contextual to what is contained in the main content - this part is wrapped
+            by <code class="a-code__base">&lt;aside&gt;</code>.</dd>
+          <dt class="a-definition-list__term">footer</dt>
+          <dd class="a-definition-list__explanation"> This is the strip across the bottom of the page that generally
+            contains the fine print, the copyright notices or contact info. The footer is also used for SEO purposes by
+            providing links for quick access to popular contentw- this part is
+            wrapped by <code class="a-code__base">&lt;footer&gt;</code>.</dd>
+        </dl>
+      </section>
+    </article>
+    <article class="o-article__base" id="meta-tags">
+      <h2 class="a-heading__base a-heading__base--heading-200 a-heading__base--is-center-aligned ">
+        <span class="a-heading__main">Meta-tags</span>
+      </h2>
+      <section class="o-section__base">
+        <h3 class="a-heading__base a-heading__base--heading-300">
+          <span class="a-heading__main">About</span>
+        </h3>
+        <p class="a-paragraph__base">
+          Matadata is information about the data and more exactly the <code class="a-code__base">&lt;meta&gt;</code> tag
+          provides information about the HTML document to the browser. This metadata will not be displayed on the page
+          but will be used by the browser, search engines and screen readers.
+        </p>
+        <p class="a-paragraph__base">
+          The <code class="a-code__base">&lt;meta&gt;</code> elements are used to specify the page description,
+          keywords, author of the document, how to display the content of the webpage, take control over the viewport
+          and other
+          metadata
+        </p>
+      </section>
+      <section class="o-section__base">
+        <h3 class="a-heading__base a-heading__base--heading-300">
+          <span class="a-heading__main">Mata-related elements</span>
+        </h3>
+        <p>
+          There are some meta-related elements that are defined but cannot represent the <code
+            class="a-code__base">&lt;meta&gt;</code> element: <code class="a-code__base">&lt;base&gt;, &lt;link&gt;,
+            &lt;script&gt;, &lt;style&gt; and &lt;title&gt;</code>.
+        </p>
+
+      </section>
+    </article>
+    <article class="o-article__base" id="html5-validation">
+      <h2 class="a-heading__base a-heading__base--heading-200 a-heading__base--is-center-aligned ">
+        <span class="a-heading__main">HTML5 Validation</span>
+      </h2>
+      <section class="o-section__base">
+        <h3 class="a-heading__base a-heading__base--heading-300">
+          <span class="a-heading__main">What is ...</span>
+        </h3>
+        <p class="a-paragraph__base">
+          The HTML Validator/Linter is used to validate HTML files for compliance against the W3C standards and performs
+          linting to assess code quality against best practices - finds missing or unbalanced HTML tags in the
+          documents, stray characters, duplicate IDs, missing or invalid attributes and other
+          recommendations.
+        </p>
+      </section>
+
+    </article>
+    <article class="o-article__base" id="understand-and-code-according-to-coding-conventions">
+      <h2 class="a-heading__base a-heading__base--heading-200 a-heading__base--is-center-aligned ">
+        <span class="a-heading__main">Understand and Code according to coding conventions</span>
+      </h2>
+      <section class="o-section__base">
+        <h3 class="a-heading__base a-heading__base--heading-300">
+          <span class="a-heading__main">Coding conventions:</span>
+        </h3>
+        <ul class="a-unordered-list__base a-unordered-list__base--bulleted">
+          <li class="a-unordered-list__item"> Always declare <code class="a-code__base">&lt;!DOCTYPE html&gt;</code>
+          </li>
+          <li class="a-unordered-list__item"> All templates must be UTF-8 encoded</li>
+          <li class="a-unordered-list__item">Tags and attributes must always be declare using lowercase character.
+          </li>
+          <li class="a-unordered-list__item">Do not write multiple elements on the same line, every element should have
+            its own line.</li>
+          <li class="a-unordered-list__item">Add an additional level of indentation fo each nested element
+          </li>
+          <li class="a-unordered-list__item">Use boolean attributes without values</li>
+          <li class="a-unordered-list__item">Use double quotes to quote attribute values</li>
+          <li class="a-unordered-list__item">Type attributes will be omitted for link stylesheets, style and script
+            elements</li>
+          <li class="a-unordered-list__item">Always include the closing tag</li>
+          <li class="a-unordered-list__item">Because of Sightly problems always include a trailing slash in self-closing
+            elements</li>
+          <li class="a-unordered-list__item">Always use alternative text for images, the only exception is when the
+            image is decorative</li>
+          <li class="a-unordered-list__item">List the attribute order as it follows: class, data-*, ID, everything else
+          </li>
+          <li class="a-unordered-list__item">Use HTML5 elements in a backward compatible way as it follows - HTML5
+            structure elements should only contain the role attribute, structure elements should not
+            be used for styling, structure elements should not be referenced in JavaScript, <code
+              class="a-code__base">&lt;div&gt;</code>
+            should follow as fallback.</li>
+          <li class="a-unordered-list__item">Always add skiplinks to the document start</li>
+          <li class="a-unordered-list__item">Do not comment your HTML code, it should be ways to understand and the
+            documentation should be found ib the SCSS files</li>
+          <li class="a-unordered-list__item">The <code class="a-code__base">&lt;head&gt;</code> should begin with the
+            encoding tag, the <code class="a-code__base">&lt;title&gt;</code> should be next for SEO reasons and all the
+            other meta-tags to follow </li>
+          <li class="a-unordered-list__item">Use IDs only for the main areas of the page, to jump to site section
+            (accessibility) or as context in JavaScript - DO NOT USE IDs for styling because of
+            specificity reasons</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+</body>
+
+</html>

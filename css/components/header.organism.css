@@ -1,0 +1,27 @@
+.o-header__base {
+  margin-bottom: 64px;
+}
+
+.o-header__base {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid #777;
+}
+
+svg {
+  display: inline-block;
+  vertical-align: top;
+}
+
+button + button {
+  margin-left: 10px;
+}
+
+.welcome {
+  color: #333;
+  font-size: 14px;
+  margin-right: 10px;
+}

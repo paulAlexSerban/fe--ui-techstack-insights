@@ -1,0 +1,45 @@
+.m-progressSteps__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.m-progressSteps__progress-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1.5rem;
+  min-width: 21.875rem;
+  z-index: 1;
+}
+.m-progressSteps__progress-wrapper::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: "";
+  background-color: #e0e0e0;
+  transform: translateY(-50%);
+  height: 0.25rem;
+  width: 100%;
+  z-index: 2;
+}
+.m-progressSteps__button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.m-progressSteps__progress-bar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: #3498db;
+  transform: translateY(-50%);
+  height: 0.25rem;
+  width: 0%;
+  transition: width 0.4s ease;
+  z-index: 2;
+}

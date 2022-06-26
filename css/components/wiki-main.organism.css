@@ -1,0 +1,5 @@
+.o-wiki-main__base {
+  height: 100vh;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
